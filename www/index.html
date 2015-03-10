@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="css/themes/educh-jquerymobile.min.css" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+        <title>EDUCH.CH</title>
+    </head>
+    <body>
+        <div>
+        </div>
+		<div id="reposHome" class="app" data-role="page" data-theme="a">
+			<div data-role="header" data-position="fixed">
+				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+				<h1>EDUCH.CH</h1>
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a onclick="load('offres')">Emplois</a></li>
+					<li><a onclick="load('ateliers')">Formation</a></li>
+					<li><a onclick="load('articles')">Articles</a></li>
+				</ul>
+			</div>
+			<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+				<ul data-role="listview">
+					<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Menu</li>
+					<li><a onclick="load('offres')">Offres d'emplois</a></li>
+					<li><a onclick="load('ateliers')">Formation coaching</a></li>
+					<li><a onclick="load('articles')">Articles</a></li>
+				</ul>
+			</div>
+			<div id="objet" data-role="content">
+			</div>
+            <div id="list" data-role="content" class="ui-li-aside">
+                <ul id="all" data-role="listview"  data-filter="false">
+                </ul>
+            </div>
+			<div data-role="footer" data-position="fixed">
+				<h4>EDUCH.CH</h4>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
