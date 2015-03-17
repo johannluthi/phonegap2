@@ -29,17 +29,7 @@
 					<li><a href="http://www.educh.ch/formation/">Formations</a></li>
 				</ul>
 			</div>
-			<div id="objet" data-role="content2">
-				<div ng-controller="SchoolController as school">
-					<div ng-repeat="atelier in school.ateliers | orderBy:'-price'">
-						<div ng-hide="atelier.soldOut">
-							<img style="margin: 0 auto;"class="img-responsive" ng-src="{{atelier.img}}"/>
-							<h4 atelier-title></h4>
-							<atelier-panels></atelier-panels>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="objet"></div>
             <div id="list" data-role="content" class="ui-li-aside">
                 <ul id="all" data-role="listview"  data-filter="false">
                 </ul>

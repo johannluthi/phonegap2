@@ -54,7 +54,7 @@ function loadObjet(objet,id) {
 		if (data.item.img){
 			body +="<img  class='img-responsive' style='margin:0 auto;' src='" + data.item.img + "'>";
 		}
-		body += "<p>" + data.item.texte + "</p>";
+		body+="<p>" + data.item.texte + "</p>";
         $("#objet").append(body);
         $('#objet').listview('refresh');
     });
