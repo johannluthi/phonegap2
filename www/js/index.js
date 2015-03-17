@@ -50,7 +50,12 @@ function loadObjet(objet,id) {
 	$('#objet').show();
     $.ajax("http://www.educh.ch/api/o" + objet + ".php?id=" + id + ":3000").done(function(data) {
 		$("#objet").empty();
-        $("#objet").append("<h2>" + data.item.title + "</h2><a href='http://www.educh.ch/" + data.item.url + "' data-role='button' data-inline='true' class='btn'>"+data.item.label_link+"</a><p>" + data.item.texte + "</p>");
+		var body = "<h2>" + data.item.title + "</h2><a href='http://www.educh.ch/" + data.item.url + "' data-role='button' data-inline='true' class='btn'>"+data.item.label_link+"</a>";
+		if (data.item.img){
+			body +="<img  class='img-responsive' style='margin:0 auto;' src='" + data.item.img + "'>";
+		}
+		body += "<p>" + data.item.texte + "</p>";
+        $("#objet").append(body);
         $('#objet').listview('refresh');
     });
 	$('#list').hide();
